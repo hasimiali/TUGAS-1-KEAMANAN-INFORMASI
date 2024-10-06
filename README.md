@@ -33,3 +33,8 @@ if __name__ == "__main__":
     data = 0x0123456789ABCDEF
     encrypted_data = des_encrypt(data, key)
     print(f"Data Terenkripsi: {encrypted_data:016X}")
+```
+### Referensi
+
+https://www.techiedelight.com/des-implementation-c/#:~:text=The%20Data%20Encryption%20Standard%20(DES)%20is%20a%20symmetric-key%20algorithm%20for
+
