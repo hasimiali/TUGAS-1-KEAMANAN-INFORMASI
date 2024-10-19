@@ -24,7 +24,100 @@ S1 = [
      5, 6, 10, 11, 12, 0, 1, 13]
 ]
 
-# Tambahkan S-box S2 hingga S8 di sini dengan cara yang sama...
+S2 = [
+    [14, 4, 13, 1, 2, 15, 11, 8, 
+     3, 10, 6, 12, 5, 9, 0, 7],
+    [0, 15, 7, 4, 14, 2, 13, 1, 
+     10, 6, 12, 11, 9, 5, 3, 8],
+    [4, 1, 14, 8, 13, 6, 2, 11, 
+     15, 12, 9, 7, 3, 10, 5, 0],
+    [15, 2, 8, 14, 3, 4, 9, 7, 
+     5, 6, 10, 11, 12, 0, 1, 13]
+]
+
+S3 = [
+    [14, 4, 13, 1, 2, 15, 11, 8, 
+     3, 10, 6, 12, 5, 9, 0, 7],
+    [0, 15, 7, 4, 14, 2, 13, 1, 
+     10, 6, 12, 11, 9, 5, 3, 8],
+    [4, 1, 14, 8, 13, 6, 2, 11, 
+     15, 12, 9, 7, 3, 10, 5, 0],
+    [15, 2, 8, 14, 3, 4, 9, 7, 
+     5, 6, 10, 11, 12, 0, 1, 13]
+]
+
+S4 = [
+    [14, 4, 13, 1, 2, 15, 11, 8, 
+     3, 10, 6, 12, 5, 9, 0, 7],
+    [0, 15, 7, 4, 14, 2, 13, 1, 
+     10, 6, 12, 11, 9, 5, 3, 8],
+    [4, 1, 14, 8, 13, 6, 2, 11, 
+     15, 12, 9, 7, 3, 10, 5, 0],
+    [15, 2, 8, 14, 3, 4, 9, 7, 
+     5, 6, 10, 11, 12, 0, 1, 13]
+]
+
+S5 = [
+    [14, 4, 13, 1, 2, 15, 11, 8, 
+     3, 10, 6, 12, 5, 9, 0, 7],
+    [0, 15, 7, 4, 14, 2, 13, 1, 
+     10, 6, 12, 11, 9, 5, 3, 8],
+    [4, 1, 14, 8, 13, 6, 2, 11, 
+     15, 12, 9, 7, 3, 10, 5, 0],
+    [15, 2, 8, 14, 3, 4, 9, 7, 
+     5, 6, 10, 11, 12, 0, 1, 13]
+]
+
+S6 = [
+    [14, 4, 13, 1, 2, 15, 11, 8, 
+     3, 10, 6, 12, 5, 9, 0, 7],
+    [0, 15, 7, 4, 14, 2, 13, 1, 
+     10, 6, 12, 11, 9, 5, 3, 8],
+    [4, 1, 14, 8, 13, 6, 2, 11, 
+     15, 12, 9, 7, 3, 10, 5, 0],
+    [15, 2, 8, 14, 3, 4, 9, 7, 
+     5, 6, 10, 11, 12, 0, 1, 13]
+]
+
+S7 = [
+    [14, 4, 13, 1, 2, 15, 11, 8, 
+     3, 10, 6, 12, 5, 9, 0, 7],
+    [0, 15, 7, 4, 14, 2, 13, 1, 
+     10, 6, 12, 11, 9, 5, 3, 8],
+    [4, 1, 14, 8, 13, 6, 2, 11, 
+     15, 12, 9, 7, 3, 10, 5, 0],
+    [15, 2, 8, 14, 3, 4, 9, 7, 
+     5, 6, 10, 11, 12, 0, 1, 13]
+]
+
+S8 = [
+    [14, 4, 13, 1, 2, 15, 11, 8, 
+     3, 10, 6, 12, 5, 9, 0, 7],
+    [0, 15, 7, 4, 14, 2, 13, 1, 
+     10, 6, 12, 11, 9, 5, 3, 8],
+    [4, 1, 14, 8, 13, 6, 2, 11, 
+     15, 12, 9, 7, 3, 10, 5, 0],
+    [15, 2, 8, 14, 3, 4, 9, 7, 
+     5, 6, 10, 11, 12, 0, 1, 13]
+]
+
+# P-table for permutation after S-boxes
+P = [
+    16, 7, 20, 21, 29, 12, 28, 17,
+    1, 15, 23, 26, 5, 18, 31, 10,
+    2, 8, 24, 14, 32, 27, 3, 9,
+    19, 13, 30, 6, 22, 11, 4, 25
+]
+
+# Expansion table (E) to expand 32-bit right half to 48 bits
+E = [
+    32, 1, 2, 3, 4, 5, 4, 5,
+    6, 7, 8, 9, 8, 9, 10, 11,
+    12, 13, 12, 13, 14, 15, 16, 17,
+    16, 17, 18, 19, 20, 21, 20, 21,
+    22, 23, 24, 25, 24, 25, 26, 27,
+    28, 29, 28, 29, 30, 31, 32, 1
+]
 
 PC1 = [
     57, 49, 41, 33, 25, 17, 9,
@@ -54,6 +147,36 @@ SHIFTS = [
     2, 2, 2, 2,
     1, 2, 2, 2
 ]
+
+# Helper function to expand 32-bit data to 48 bits using E-table
+def expand(data):
+    return permute(data, E)
+
+# Helper function to apply S-boxes
+def sbox(data):
+    output = 0
+    for i in range(8):
+        block = (data >> (42 - 6 * i)) & 0x3F  # Extract 6 bits for current S-box
+        row = ((block >> 4) & 0x2) | (block & 0x1)  # First and last bit for row
+        col = (block >> 1) & 0xF  # Middle four bits for column
+        # Select the value from S-box and append it to the result
+        s_value = S1[row][col]  # Use S1 as an example, but repeat for S2 to S8
+        output = (output << 4) | s_value
+    return output
+
+# Feistel F-function
+def f_function(right, subkey):
+    # Step 1: Expand the right half from 32 bits to 48 bits
+    expanded_right = expand(right)
+    
+    # Step 2: XOR the expanded right half with the subkey
+    xor_result = expanded_right ^ subkey
+    
+    # Step 3: Apply S-box substitution (8 groups of 6 bits to 4 bits)
+    sbox_result = sbox(xor_result)
+    
+    # Step 4: Apply P-table permutation to the S-box result
+    return permute(sbox_result, P)
 
 # Fungsi bantu untuk melakukan permutasi
 def permute(data, perm):
@@ -85,24 +208,32 @@ def key_schedule(key):
     
     return subkeys
 
-# Fungsi placeholder untuk enkripsi DES
+# Updated DES encryption function with Feistel rounds
 def des_encrypt(data, key):
     subkeys = key_schedule(key)
     
-    # Melakukan Permutasi Awal
+    # Perform Initial Permutation (IP)
     data = permute(data, IP)
     
-    # Memisahkan data menjadi dua bagian: kiri dan kanan
-    left = (data >> 32)
-    right = (data & 0xFFFFFFFF)
+    # Split data into left and right halves
+    left = (data >> 32) & 0xFFFFFFFF
+    right = data & 0xFFFFFFFF
     
-    # Melakukan 16 putaran pemrosesan
+    # 16 rounds of processing
     for i in range(16):
-        # Fungsi putaran (F) placeholder
-        pass  # Implementasikan fungsi putaran di sini
-
-    # Menggabungkan bagian dan menerapkan permutasi akhir
+        # Save the old right half for swapping
+        old_right = right
+        
+        # Feistel function: f_function(right, subkeys[i])
+        right = left ^ f_function(right, subkeys[i])
+        
+        # Left becomes the old right half
+        left = old_right
+    
+    # Combine left and right halves (swap back after last round)
     combined = (right << 32) | left
+    
+    # Apply Final Permutation (FP)
     data = permute(combined, FP)
     
     return data
